@@ -10,8 +10,16 @@ const AddFizzBuzz = function () {
   const BuzzNum = Number(document.getElementById('BuzzNum').value);
   const output = document.getElementById('output');
 
+  document.getElementById('FizzNum').value = "";
+  document.getElementById('BuzzNum').value = "";
+  output.innerHTML = "";
+  let ptag = document.createElement('p');
+  ptag.textContent = "[出力]"
+  output.appendChild(ptag);
+
   if (!Number.isInteger(FizzNum) || !Number.isInteger(BuzzNum) || FizzNum === 0 || BuzzNum === 0) {
-    alert('整数値を入力してください');
+    ptag.textContent = '整数値を入力してください';
+    output.appendChild(ptag);
   }
 
   for (let i = 1; i < 100; i++) {
