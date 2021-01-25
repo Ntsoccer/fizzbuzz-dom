@@ -20,6 +20,7 @@ const AddFizzBuzz = function () {
   if (!Number.isInteger(FizzNum) || !Number.isInteger(BuzzNum) || FizzNum === 0 || BuzzNum === 0) {
     ptag.textContent = '整数値を入力してください';
     output.appendChild(ptag);
+    return;
   }
 
   for (let i = 1; i < 100; i++) {
